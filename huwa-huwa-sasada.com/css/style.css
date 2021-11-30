@@ -1,0 +1,2253 @@
+@charset "utf-8";
+
+/* CSS Document */
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    font-size: 100%;
+    color: #000;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#main_contents {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #FFF;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+span.light_brown {
+    color: #664D0D;
+    font-weight: bold;
+}
+
+span.dark_red {
+    color: #860C0E;
+}
+
+span.brown {
+    color: #8B4814;
+    font-weight: bold;
+}
+
+#back-top {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+#back-top a {
+    /* transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+
+img {
+    border: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+input[type='radio'] {
+    margin: 5px 0 0 10px;
+}
+
+/*-------------------------
+    ヘッダー
+-------------------------*/
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #5e564f;
+    justify-content: space-between;
+}
+
+.header_left a {
+    display: block;
+    height: 60px;
+}
+
+.header_left img {
+    height: 100%;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+}
+
+.header_txt {
+    display: inline-block;
+    margin: 0 30px 0 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+.header_link {
+    display: block;
+    padding: 5px 25px;
+    margin: 0 20px 0 0;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.header_link:hover {
+    opacity: 0.8;
+}
+
+.header_link_1 {
+    background-color: #ff6699;
+}
+
+.header_link_2 {
+    background-color: #FF9966;
+}
+
+.header_link_3 {
+    background-color: #FF9966;
+}
+
+.header_link_3 {
+    position: relative;
+    background-color: #DEB887;
+    color: #555555;
+    padding: 5px 25px 5px 35px;
+    font-weight: bold;
+}
+
+.header_link_3:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: 5px;
+    left: 15px;
+    width: 1.4em;
+    height: 1.4em;
+    background: url('../images/cart_icon.png') no-repeat;
+    color: #fff;
+    background-size: contain;
+
+}
+
+/*-------------------------
+    トップページ
+-------------------------*/
+
+/* PC&タブレット端末向けCSS */
+
+@media screen and (min-width:768px) {
+    .purchase_btn01 {
+        max-width: 950px;
+        margin-left: 25%;
+        padding-bottom: 15px;
+    }
+
+    .purchase_btn01 a {
+        display: block;
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    .purchase_btn01 a:hover {
+        opacity: 0.5;
+    }
+
+    #first_view {
+        max-width: 950px;
+        text-align: center;
+        padding: 0;
+    }
+
+    #first_view img {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        vertical-align: bottom;
+    }
+
+    .first_view_text {
+        background-color: #b4aeae;
+        color: white;
+        font-size: 1.3em;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        font-weight: bold;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .sankaku {
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top: 40px solid #b4aeae;
+        position: relative;
+        margin-left: 46%;
+    }
+
+    /* banner reflection */
+
+    .reflection-img {
+        width: 450px;
+        height: 60px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .reflection {
+        height: 100%;
+        width: 30px;
+        position: absolute;
+        top: -180px;
+        left: 0;
+        background-color: #fff;
+        opacity: 0;
+        transform: rotate(45deg);
+        animation: reflection 2s ease-in-out infinite;
+        -webkit-transform: rotate(45deg);
+        -webkit-animation: reflection 2s ease-in-out infinite;
+        -moz-transform: rotate(45deg);
+        -moz-animation: reflection 2s ease-in-out infinite;
+        -ms-transform: rotate(45deg);
+        -ms-animation: reflection 2s ease-in-out infinite;
+        -o-transform: rotate(45deg);
+        -o-animation: reflection 2s ease-in-out infinite;
+    }
+
+    @keyframes reflection {
+        0% {
+            transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes reflection {
+        0% {
+            -webkit-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -webkit-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -webkit-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-moz-keyframes reflection {
+        0% {
+            -moz-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -moz-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -moz-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -moz-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-ms-keyframes reflection {
+        0% {
+            -ms-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -ms-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -ms-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -ms-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-o-keyframes reflection {
+        0% {
+            -o-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -o-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -o-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -o-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    /* banner reflection ここまで */
+
+    #first_contents dl {
+        display: none;
+    }
+
+    #first_contents .osusume {
+        width: 100%;
+        background-image: url("images/osusume_02.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-bottom: 70px;
+        padding-top: 15px;
+        color: #59493F;
+    }
+
+    #first_contents .osusume h1 {
+        font-size: 1.6em;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        font-weight: bolder;
+        text-align: center;
+        line-height: 125%;
+    }
+
+    #first_contents .osusume h1 span {
+        color: #12864e;
+    }
+
+    #first_contents .osusume ul li {
+        font-size: 1.3em;
+        font-family: "HGP創英角ゴシックUB";
+        border-bottom: dashed 3px #C1AA80;
+        max-width: 600px;
+        line-height: 220%;
+        margin: 0 auto;
+        text-align: left;
+        list-style-image: url(images/check.png);
+    }
+
+    #first_contents .osusume ul li span {
+        color: #B03E08;
+    }
+
+    #first_contents .sozai {
+        width: 100%;
+    }
+
+    #first_contents .sozai h1 {
+        text-align: center;
+        color: #E73F42;
+        font-size: 30px;
+        font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        margin-bottom: 10px;
+    }
+
+    #first_contents hr.sozai {
+        width: 90% !important;
+    }
+
+    .sozai_subtitle {
+        text-align: center;
+        font-size: 26px;
+        color: #6C5A23;
+        font-weight: bold;
+        font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+    }
+
+    .sozai_setumei {
+        background: url(images/sozai.jpg) no-repeat;
+        background-position: center;
+        max-width: 950px;
+        height: 650px;
+        position: relative;
+        margin: 30px auto 0 auto;
+    }
+
+    .sozai_setumei img {
+        display: none;
+    }
+
+    .cashmere_sozai {
+        position: absolute;
+        top: 400px;
+        left: 30px;
+    }
+
+    .mink_sozai {
+        position: absolute;
+        top: 500px;
+        left: 30px;
+    }
+
+    span.brown {
+        color: #8B4814;
+        font-weight: bold;
+    }
+
+    .mink_cashmere {
+        background: url(images/mink_cashmere.jpg) no-repeat;
+        background-position: center;
+        position: relative;
+        max-width: 950px;
+        height: 850px;
+        margin: 15px auto;
+    }
+
+    .mink_cashmere h2 {
+        background: url(images/first_contents_h2.png) no-repeat;
+        background-position: center;
+        max-width: 950px;
+        height: 120px;
+        text-align: center;
+        font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        font-weight: bold;
+        font-size: 27px;
+        color: #12864E;
+        padding-top: 60px;
+    }
+
+    .mink_cashmere img {
+        display: none;
+    }
+
+    .mink_cashmere_setumei {
+        position: absolute;
+        width: 58%;
+        top: 250px;
+        left: 35px;
+    }
+
+    #second_contents {
+        max-width: 950px;
+    }
+
+    #second_contents img {
+        width: 98%;
+    }
+
+    .second_contents_left,
+    .second_contents_right {
+        float: left;
+        display: block;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .second_contents_left li,
+    .second_contents_right li {
+        list-style: none;
+        color: #7E6B5A;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        font-size: 1.4em;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .second_contents_text01 {
+        padding: 10px 15px;
+    }
+
+    .second_contents_text02 {
+        padding: 30px;
+    }
+
+    .mink_cashmere_setumei .setumei {
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 35px;
+    }
+
+    .second_contents_setumei p {
+        max-width: 330px;
+        position: relative;
+        top: 16px;
+        left: 560px;
+        font-weight: bold;
+        font-size: 19px;
+        color: #6C6868;
+    }
+
+    .second_contents_title01 h1 {
+        color: #FFFFFF;
+        font-size: 1.6em;
+        text-shadow: 0px 0px 13px #000000;
+        text-align: center;
+        max-width: 950px;
+        margin: 0 auto;
+        background-color: #B4AEAE;
+        padding: 20px 0;
+    }
+
+    .second_contents_title02 h2 {
+        color: #FFFFFF;
+        font-size: 1.6em;
+        text-shadow: 0px 0px 13px #000000;
+        text-align: center;
+        max-width: 950px;
+        margin: 40px auto 0 auto;
+        background-color: #B4AEAE;
+        padding: 20px 0;
+    }
+
+
+    #third_contents {
+        margin: 5% 0;
+    }
+
+    .color_variation .third_contents_title {
+        background: url(images/first_contents_h2.png) no-repeat;
+        height: 120px;
+        max-width: 750px;
+        margin: 2% auto;
+    }
+
+    .color_variation .third_contents_title h1 {
+        text-align: center;
+        font-size: 28px;
+        color: #6C6868;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    .color_variation .color_variation_setumei {
+        background: url(images/color_image01.jpg) no-repeat;
+        background-position: right;
+        height: 427px;
+        max-width: 950px;
+        position: relative;
+    }
+
+    .color_variation .color_variation_setumei p {
+        max-width: 275px;
+        font-size: 1em;
+        position: absolute;
+        right: 6%;
+        top: 10%;
+    }
+
+    .color_variation .color_variation_setumei p span {
+        color: #781C07;
+        font-weight: bold;
+    }
+
+    .color_variation img {
+        display: none;
+    }
+
+    .color_select {
+        max-width: 950px;
+        text-align: center;
+    }
+
+    .color_select h2 {
+        color: #FF0004;
+        font-size: 21px;
+    }
+
+    .color_select h2 span {
+        color: #6C6868;
+        font-size: 120%;
+    }
+
+    .color_sample {
+        list-style: none;
+        max-width: 950px;
+        padding: 0;
+    }
+
+    .color_sample li {
+        display: inline-block;
+        width: 18%;
+    }
+
+    .color_sample img {
+        max-width: 145px;
+    }
+
+    .color_sample img:hover {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+
+    .color_sample_name {
+        list-style: none;
+        max-width: 950px;
+        padding: 0;
+    }
+
+    .color_sample_name li {
+        display: inline-block;
+        width: 18%;
+    }
+
+    .color_sample_attention {
+        font-size: 13px;
+        color: #7e6b5a;
+    }
+
+    hr.border {
+        width: 90%;
+        border-bottom: 1px solid #DCDCDC;
+        margin: 0 auto;
+    }
+
+    .color_select p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #664D0D;
+    }
+
+    .items_title h3 {
+        color: #FFFFFF;
+        font-size: 1.5em;
+        text-shadow: 0px 0px 13px #000000;
+        text-align: center;
+        max-width: 950px;
+        margin: 5% auto 0 auto;
+        background-color: #B4AEAE;
+        padding: 20px 0;
+    }
+
+    .item_select {
+        max-width: 950px;
+    }
+
+    .item_select_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .item_select p {
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+        color: #803400;
+    }
+
+    .item_select ul {
+        max-width: 950px;
+        display: flex;
+        justify-content: center;
+        border-collapse: separate;
+        table-layout: fixed;
+        border-spacing: 5px;
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+    }
+
+    .item_select li {
+        text-align: center;
+        width: 210px;
+        height: 500px;
+        *display: inline;
+        *zoom: 1;
+    }
+
+    .item_img {
+        max-width: 160px;
+    }
+
+    p.item_name {
+        color: #3A2F0F;
+        font-size: 15px;
+        text-align: center;
+        font-weight: bold;
+        margin: 5px auto;
+    }
+
+    p.item_price {
+        color: red;
+        margin: 0 0 5px;
+        font-size: 13px;
+        text-align: center;
+        text-align: right;
+        font-weight: bold;
+
+    }
+
+    p.item_text {
+        color: #3F3F3F;
+        font-size: 13px;
+        text-align: left;
+        font-weight: normal;
+        margin: 0 auto 10px auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        /*IE対策*/
+        line-height: 1.5em;
+        max-height: 4.5em;
+    }
+
+    .purchase_btn02 a {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .purchase_btn02 a:hover {
+        opacity: 0.5;
+    }
+
+    .purchase_btn02_box_2 {
+        width: 80%;
+        margin: 0 auto;
+        height: 130px;
+    }
+
+    .purchase_btn02_box_3 {
+        height: 50px;
+    }
+
+    .purchase_btn02_box_3 input[type="submit"] {
+        width: 188px;
+        height: 36px;
+        border: 0;
+        background-image: url("../images/purchase_btn02.png");
+        cursor: pointer;
+    }
+
+    .purchase_btn02_box_3 input[type="submit"]:hover {
+        opacity: 0.5;
+    }
+
+    .item_size {
+        max-width: 950px;
+        margin: 10px auto;
+    }
+
+    .item_size img {
+        width: 100%;
+    }
+
+    .item_syousai {
+        max-width: 950px;
+        margin: 10px auto;
+    }
+
+    .item_syousai img {
+        width: 100%;
+    }
+
+    #shopping_guide {
+        width: 100%;
+        background-image: url(images/shopping_guide000.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 95% 100%;
+        color: #59493F;
+        font-size: 1em;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        padding-bottom: 81px;
+        padding-top: 15px;
+    }
+
+    #shopping_guide li {
+        list-style: none;
+        margin: 0 auto;
+        margin-left: 120px;
+    }
+
+    #shopping_guide .left {
+        float: left;
+        line-height: 260%;
+        text-align: center;
+        margin: 0 auto;
+        width: 25%;
+        padding-top: 10px;
+    }
+
+    #shopping_guide .right {
+        float: left;
+        line-height: 260%;
+        text-align: left;
+        margin: 0 auto;
+        width: 60%;
+        padding-top: 10px;
+    }
+
+    footer {
+        max-width: 950px;
+        background: #5e564f;
+        text-align: center;
+        padding: 5px 0;
+        margin: 0 auto;
+    }
+
+    footer img {
+        width: 100%;
+    }
+
+    small {
+        color: #FFFFFF;
+    }
+
+}
+
+/* スマホ向けCSS */
+
+@media screen and (max-width:767px) {
+    #first_view img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+    .first_view_text {
+        background-color: #b4aeae;
+        color: white;
+        font-size: 0.7em;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        font-weight: bold;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .sankaku {
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top: 40px solid #b4aeae;
+        position: relative;
+        margin-left: 40%;
+    }
+
+    /* banner reflection */
+
+    .reflection-img {
+        max-width: 450px;
+        max-height: 60px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .reflection {
+        height: 100%;
+        width: 30px;
+        position: absolute;
+        top: -180px;
+        left: 0;
+        background-color: #fff;
+        opacity: 0;
+        transform: rotate(45deg);
+        animation: reflection 2s ease-in-out infinite;
+        -webkit-transform: rotate(45deg);
+        -webkit-animation: reflection 2s ease-in-out infinite;
+        -moz-transform: rotate(45deg);
+        -moz-animation: reflection 2s ease-in-out infinite;
+        -ms-transform: rotate(45deg);
+        -ms-animation: reflection 2s ease-in-out infinite;
+        -o-transform: rotate(45deg);
+        -o-animation: reflection 2s ease-in-out infinite;
+    }
+
+    @keyframes reflection {
+        0% {
+            transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes reflection {
+        0% {
+            -webkit-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -webkit-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -webkit-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-moz-keyframes reflection {
+        0% {
+            -moz-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -moz-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -moz-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -moz-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-ms-keyframes reflection {
+        0% {
+            -ms-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -ms-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -ms-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -ms-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    @-o-keyframes reflection {
+        0% {
+            -o-transform: scale(0) rotate(45deg);
+            opacity: 0;
+        }
+
+        80% {
+            -o-transform: scale(0) rotate(45deg);
+            opacity: 0.5;
+        }
+
+        81% {
+            -o-transform: scale(4) rotate(45deg);
+            opacity: 1;
+        }
+
+        100% {
+            -o-transform: scale(50) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    /* banner reflection ここまで */
+
+    .purchase_btn01 {
+        width: 100%;
+    }
+
+    .purchase_btn01 a {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .purchase_btn01 a:hover {
+        opacity: 0.5;
+    }
+
+    #first_contents .osusume {
+        width: 100%;
+        background-image: url("images/osusume_02.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #59493F;
+        padding-bottom: 10px;
+    }
+
+    #first_contents .osusume h1 {
+        font-size: 1em;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        font-weight: bolder;
+        text-align: center;
+        line-height: 125%;
+        padding-top: 10px;
+    }
+
+    #first_contents .osusume h1 span {
+        color: #12864e;
+    }
+
+    #first_contents .osusume ul li {
+        font-size: 0.8em;
+        font-family: "HGP創英角ゴシックUB";
+        border-bottom: dashed 3px #C1AA80;
+        max-width: 600px;
+        line-height: 220%;
+        margin: 0 auto;
+        text-align: left;
+        list-style-image: url(images/check.png);
+    }
+
+    #first_contents .osusume ul li span {
+        color: #B03E08;
+    }
+
+    #first_contents .sozai {
+        width: 100%;
+    }
+
+    #first_contents .sozai h1 {
+        text-align: center;
+        color: #E73F42;
+        width: 90%;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+        margin: 2% auto;
+    }
+
+    #first_contents hr.sozai {
+        width: 90% !important;
+    }
+
+    .sozai_subtitle {
+        text-align: center;
+        color: #6C5A23;
+        font-size: 80%;
+        font-weight: bold;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    }
+
+    .sozai_setumei {
+        background: none;
+        width: 100%;
+        position: static;
+        margin: 5% auto 2% auto;
+    }
+
+    .sozai_setumei img {
+        display: block;
+        width: 100%;
+    }
+
+    .cashmere_sozai {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cashmere_sozai p {
+        font-size: 85%;
+    }
+
+    .mink_sozai {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mink_sozai p {
+        font-size: 85%;
+    }
+
+    .mink_cashmere {
+        background: none;
+        width: 100%;
+        position: static;
+        margin: 5% auto 2% auto;
+    }
+
+    .mink_cashmere img {
+        display: block;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .mink_cashmere h2 {
+        position: static;
+        text-align: center;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+        font-weight: bold;
+        font-size: 75%;
+        color: #12864E;
+        background: #EDE6C2;
+        width: 98%;
+        padding: 5% 0;
+        margin: 10% auto 3% auto;
+        border-radius: 5px;
+        border: 1px solid #C8C098;
+    }
+
+    .mink_cashmere_setumei {
+        position: static;
+        width: 90%;
+        font-size: 85%;
+        margin: 0 auto;
+    }
+
+    .mink_cashmere_setumei .setumei {
+        margin: 2% 0 5% 0;
+    }
+
+    .second_contents_title01,
+    .second_contents_title02 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        background-color: #B4AEAE;
+    }
+
+    .second_contents_title01 h1,
+    .second_contents_title02 h2 {
+        color: #FFFFFF;
+        font-size: 70%;
+        text-shadow: 0px 0px 13px #000000;
+        text-align: center;
+        position: static;
+        margin-bottom: 0;
+        padding: 5% 0;
+    }
+
+    #second_contents img {
+        width: 100%;
+    }
+
+    .second_contents_left,
+    .second_contents_right {
+        float: left;
+        display: block;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .second_contents_left li,
+    .second_contents_right li {
+        list-style: none;
+        color: #7E6B5A;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        font-size: 0.8em;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .second_contents_text01 {
+        padding: 10px;
+    }
+
+    .second_contents_text02 {
+        padding: 10px;
+    }
+
+    .color_variation .third_contents_title {
+        position: static;
+        text-align: center;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+        font-weight: bold;
+        background: #EDE6C2;
+        width: 98%;
+        margin: 10% auto 3% auto;
+        border-radius: 5px;
+        border: 1px solid #C8C098;
+    }
+
+    .color_variation .third_contents_title h1 {
+        position: static;
+        font-size: 100%;
+        color: #6E2C2D;
+    }
+
+    .color_variation img {
+        display: block;
+        width: 100%;
+    }
+
+    .color_variation .color_variation_setumei {
+        background: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .color_variation .color_variation_setumei p {
+        position: static;
+        font-size: 80%;
+    }
+
+    .color_variation .color_variation_setumei p span {
+        color: #781C07;
+        font-weight: bold;
+        font-size: 90%;
+    }
+
+    .color_variation .color_variation_setumei br {
+        display: none;
+    }
+
+    .color_select {
+        text-align: center;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .color_select img {
+        width: 100%;
+    }
+
+    .color_select h2 {
+        color: #FF0004;
+        font-size: 85%;
+    }
+
+    .color_select h2 span {
+        color: #6C6868;
+        font-size: 100%;
+    }
+
+    .color_sample {
+        list-style: none;
+        max-width: 767px;
+        padding: 0;
+    }
+
+    .color_sample li {
+        display: inline-block;
+        width: 18%;
+    }
+
+    .color_sample img {
+        max-width: 145px;
+    }
+
+    .color_sample img:hover {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+
+    .color_sample_name {
+        list-style: none;
+        max-width: 767px;
+        padding: 0;
+        font-size: 50%;
+    }
+
+    .color_sample_name li {
+        display: inline-block;
+        width: 18%;
+    }
+
+    .color_sample_attention {
+        font-size: 0.8em;
+        color: #7e6b5a;
+    }
+
+    .border {
+        width: 95%;
+        border-bottom: 1px solid #DCDCDC;
+        margin: 0 auto;
+    }
+
+    .color_select p {
+        font-size: 80%;
+        font-weight: bold;
+        color: #664D0D;
+    }
+
+    .items_title h3 {
+        color: #FFFFFF;
+        font-size: 90%;
+        text-shadow: 0px 0px 13px #000000;
+        text-align: center;
+        width: 100%;
+        margin: 5% auto;
+        background-color: #B4AEAE;
+        padding: 20px 0;
+    }
+
+    .item_select {
+        width: 100%;
+    }
+
+    .item_select p {
+        font-size: 80%;
+        font-weight: bold;
+        text-align: center;
+        color: #803400;
+    }
+
+    .item_select ul {
+        width: 100%;
+        display: table;
+        border-collapse: separate;
+        table-layout: fixed;
+        border-spacing: 2px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .item_select li {
+        display: table-cell;
+        text-align: center;
+        *display: inline;
+        *zoom: 1;
+    }
+
+    .item_select li img {
+        width: 90%;
+    }
+
+    p.item_name {
+        color: #3A2F0F;
+        font-size: 75%;
+        text-align: center;
+        font-weight: bold;
+        margin: 5px auto;
+    }
+
+    p.item_text {
+        color: #3F3F3F;
+        font-size: 70%;
+        text-align: left;
+        font-weight: normal;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .item_size img {
+        width: 100%;
+    }
+
+    .item_syousai img {
+        width: 100%;
+    }
+
+    #shopping_guide {
+        width: 100%;
+        background-image: url(images/shopping_guide000.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 95% 100%;
+        color: #59493F;
+        font-size: 0.6em;
+        font-family: "HG明朝E", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+
+    #shopping_guide li {
+        list-style: none;
+        margin: 0 auto;
+    }
+
+    #shopping_guide .left {
+        float: left;
+        line-height: 210%;
+        text-align: center;
+        margin: 0 auto;
+        width: 20%;
+    }
+
+    #shopping_guide .right {
+        float: left;
+        line-height: 210%;
+        text-align: left;
+        margin: 0 auto;
+        width: 45%;
+    }
+
+    footer {
+        width: 100%;
+        background: #5e564f;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    footer img {
+        width: 100%;
+    }
+}
+
+/*-------------------------
+  ログイン画面
+-------------------------*/
+.login_title {
+    padding: 50px 40px 10px 40px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login_txt {
+    padding: 0 0 20px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.login_form {
+    text-align: center;
+}
+
+.login_form_panel {
+    min-height: 300px;
+    max-width: 60%;
+    padding: 20px 40px;
+    margin: 0 auto 100px auto;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 2px solid #dedede;
+}
+
+.login_form_label {
+    display: block;
+    margin: 15px 0 0 0;
+    color: #222;
+    text-align: left;
+}
+
+.login_form_item {
+    width: 100%;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 2px solid #dedede;
+}
+
+.login_form_submit {
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+.login_form_submit input {
+    padding: 10px 40px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 0;
+    background-color: #ff6699;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login_form_submit input:hover {
+    opacity: 0.8;
+}
+
+.error {
+    margin: 0;
+    color: red;
+    font-weight: bold;
+    text-align: left;
+}
+
+.success {
+    margin: 0;
+    color: #0000FF;
+    font-weight: bold;
+    text-align: left;
+}
+
+/*-------------------------
+  新規会員登録画面
+-------------------------*/
+.register {
+    padding: 50px 0 100px;
+}
+
+.register_title {
+    padding: 0 40px 10px 40px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.register_txt {
+    padding: 0 0 50px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.register_form_panel {
+    padding: 30px 40px;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+}
+
+.register_form_title {
+    background: #5e564f;
+    color: #fff;
+    font-size: 20px;
+    border-left: 8px solid #FF9966;
+    padding: 15px 20px 15px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.register_form_panel table {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #EDEDED;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.register_form_panel th {
+    width: 35%;
+    padding: 20px 15px;
+    background-color: #F8F8F8;
+    text-align: left;
+    font-size: 12px;
+    border-right: 1px solid #EDEDED;
+}
+
+.register_form_panel th span {
+    float: right;
+    font-size: 8px;
+    background-color: #FF0000;
+    margin-bottom: 0;
+    padding: 3px 4px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #FFF;
+}
+
+.register_form_panel tr {
+    border-bottom: 1px solid #EDEDED;
+}
+
+.register_form_panel td {
+    width: 65%;
+    background-color: #FFF;
+    padding: 20px 15px;
+    font-size: 14px;
+}
+
+.register_form_panel span {
+    display: block;
+    margin: 5px 0 0;
+    color: red;
+}
+
+.register_form_panel td input[type="text"] {
+    display: block;
+    padding: 8px 5px;
+    border: solid 1px #ccc;
+}
+
+.register_form_panel td input[type="password"] {
+    display: block;
+    width: 30%;
+    padding: 8px 5px;
+    border: solid 1px #ccc;
+}
+
+.register_form_panel td input[name="mail"] {
+    width: 60%;
+}
+
+.register_form_panel td input[name="mail_confirm"] {
+    width: 60%;
+}
+
+.register_form_panel td input[name="city"] {
+    width: 60%;
+}
+
+.register_form_panel td input[name="address"] {
+    width: 60%;
+}
+
+.register_form_panel td input[name="other"] {
+    width: 60%;
+}
+
+.register_form_panel td input::placeholder {
+    color: #CCCCCC;
+}
+
+.register_form_panel td textarea::placeholder {
+    color: #CCCCCC;
+}
+
+.register_form_panel td textarea {
+    display: block;
+    width: 80%;
+    height: 50px;
+    padding: 8px 5px;
+    border: solid 1px #ccc;
+}
+
+.register_form_panel td select {
+    padding: 8px 5px;
+    margin: 0 5px 0 0;
+    border: solid 1px #ccc;
+}
+
+#register_form_tel1 input,
+#register_form_post1 input,
+#register_form_tel2 input,
+#register_form_post2 input {
+    width: 50px;
+    display: inline-block;
+}
+
+.register_form_submit {
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+.register_form_submit input {
+    padding: 10px 40px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 15px;
+    background-color: #FF9966;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register_form_submit input:hover {
+    opacity: 0.8;
+}
+
+.cancel_btn input {
+    background-color: #777777;
+    cursor: pointer;
+}
+
+/*-------------------------
+    新規会員登録完了画面
+-------------------------*/
+.register_conf {
+    padding: 50px 0 70px;
+}
+
+.register_conf_panel {
+    padding: 30px 40px;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.register_conf_title {
+    background: #5e564f;
+    color: #fff;
+    font-size: 20px;
+    border-left: 8px solid #FF9966;
+    padding: 15px 20px 15px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.register_conf_txt1 {
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.register_conf_txt2 {
+    padding: 0 0 30px;
+}
+
+.register_conf_btn {
+    display: inline-block;
+    padding: 10px 40px;
+    margin: 0 0 30px;
+    border-radius: 15px;
+    background-color: #ff6699;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.register_conf_btn:hover {
+    opacity: 0.8;
+}
+
+.register_conf_error {
+    font-size: 20px;
+    color: red;
+}
+
+/*-------------------------
+    カート画面
+-------------------------*/
+.cart {
+    padding: 60px 0;
+    display: flex;
+}
+
+.cart_side {
+    width: 25%;
+    padding: 80px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.cart_main {
+    width: 75%;
+    padding: 10px 20px 80px 20px;
+    border-left: 1px dotted #000;
+    box-sizing: border-box;
+}
+
+.cart_title {
+    background: #5e564f;
+    color: #fff;
+    font-size: 18px;
+    border-left: 8px solid #FF9966;
+    border-bottom: 1px solid #000;
+    padding: 5px 15px 5px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.cart_panel {
+    padding: 10px 20px;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+}
+
+.cart_panel .error {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.cart_table {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #EDEDED;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.cart_table tr {
+    border-bottom: 1px solid #EDEDED;
+}
+
+.cart_table th {
+    padding: 10px 5px;
+    border-right: 1px solid #EDEDED;
+    background-color: #F8F8F8;
+    font-size: 14px;
+}
+
+.cart_table td {
+    padding: 5px 5px;
+    border-right: 1px solid #EDEDED;
+    background-color: #FFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cart_table td input[type='text'] {
+    width: 30px;
+    margin: 0 0 5px;
+}
+
+.cart_table td input[type='submit'] {
+    font-size: 12px;
+    padding: 1px 3px;
+    cursor: pointer;
+}
+
+.cart_table td p {
+    margin: 0;
+}
+
+.cart_table td img {
+    height: 60px;
+}
+
+.cart_total_panel {
+    padding: 5px 10px;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    box-shadow: 0 0 1px gray;
+    text-align: center;
+}
+
+.cart_total_panel_2 {
+    padding: 0 10px;
+    background-color: #fff;
+}
+
+.cart_total_table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.cart_total_table th {
+    padding: 10px 5px;
+    font-size: 12px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.cart_total_table tr:nth-child(1) th {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart_total_table td {
+    padding: 5px 5px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.cart_total_table tr:last-child {
+    border-top: 3px dotted #EDEDED;
+    color: red;
+    font-weight: bold;
+}
+
+.cart_total_table tr:last-child th {
+    font-weight: bold;
+}
+
+.cart_btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px auto 10px auto;
+    background-color: #ff6699;
+    color: #fff;
+    font-size: 14px;
+    border: 0;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cart_btn:hover {
+    opacity: 0.5;
+}
+
+.cart_total_panel p {
+    margin: 0;
+}
+
+/*-------------------------
+  商品購入画面/確認画面
+-------------------------*/
+.purchase_edit {
+    padding: 50px 0 100px;
+}
+
+.purchase_txt {
+    padding: 0 0 50px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.purchase_edit table p {
+    margin: 0;
+}
+
+#purchase_edit_form_post1 {
+    display: inline-block;
+}
+
+.address_btn {
+    display: inline-block;
+    padding: 0 0 0 10px;
+}
+
+.address_btn input{
+    cursor: pointer;
+}
+
+.purchase_edit_panel_1 {
+    padding: 20px 30px;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+}
+
+.purchase_edit_panel_2 {
+    padding: 20px 30px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.purchase_title {
+    background: #5e564f;
+    color: #fff;
+    font-size: 20px;
+    border-left: 8px solid #FF9966;
+    padding: 10px 15px 10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.purchase_subtitle {
+    color: #000;
+    font-size: 16px;
+    border-left: 8px solid #FF9966;
+    padding: 5px 10px 5px;
+    margin-bottom: 30px;
+    border-bottom: 2px dotted #000;
+    box-sizing: border-box;
+}
+
+.modify_radio{
+    display: inline-block;
+    margin: 0 0 20px;
+}
+
+.purchase_subtitle_1{
+    margin-bottom: 5px;
+}
+
+#purchase_edit_panel_target {
+    display: none;
+}
+
+.purchase_edit_panel_3 {
+    margin: 0 80px 50px 80px;
+}
+
+.purchase_edit_panel_3 table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.purchase_edit_panel_3 tr {
+    border-bottom: 1px solid #BBBBBB;
+}
+
+.purchase_edit_panel_3 th {
+    width: 25%;
+    padding: 10px 15px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 14px;
+}
+
+.purchase_edit_panel_3 th span {
+    float: right;
+    font-size: 8px;
+    background-color: #FF0000;
+    margin: 0;
+    padding: 3px 4px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #FFF;
+}
+
+.purchase_edit_panel_3 td {
+    width: 75%;
+    background-color: #FFF;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.purchase_edit_panel_3 span {
+    display: block;
+    margin: 5px 0 0;
+    color: red;
+}
+
+.purchase_edit_panel_text{
+    margin: 20px 0 ;
+    color: red;
+    text-align: center;
+}
+
+#other_note {
+    display: inline-block;
+    color: #BBBBBB;
+}
+
+.purchase_edit_panel_3 td input[type="text"] {
+    display: block;
+    padding: 8px 5px;
+    border: solid 1px #ccc;
+}
+
+.purchase_edit_panel_3 td input[name="city"] {
+    margin: 0 0 10px;
+    width: 60%;
+}
+
+.purchase_edit_panel_3 td input[name="address"] {
+    margin: 0 0 10px;
+    width: 60%;
+}
+
+.purchase_edit_panel_3 td input[name="other"] {
+    display: inline-block;
+    width: 60%;
+}
+
+.purchase_edit_panel_3 td input::placeholder {
+    color: #CCCCCC;
+}
+
+.purchase_edit_panel_3 td select {
+    padding: 8px 5px;
+    margin: 0 5px 10px 0;
+    border: solid 1px #ccc;
+}
+
+#purchase_edit_form_tel1 input,
+#purchase_edit_form_post1 input,
+#purchase_edit_form_tel2 input,
+#purchase_edit_form_post2 input {
+    width: 50px;
+    display: inline-block;
+}
+
+.purchase_edit_submit {
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+.purchase_edit_submit input {
+    padding: 10px 40px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 15px;
+    background-color: #FF9966;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.purchase_edit_submit input:hover {
+    opacity: 0.8;
+}
+
+
+/*-------------------------
+    商品購入確認画面
+-------------------------*/
+
+.cart_conf_table {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #DDDDDD;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.cart_conf_table tr {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.cart_conf_table th {
+    width: auto;
+    padding: 5px 5px;
+    border-right: 1px solid #DDDDDD;
+    background-color: #F8F8F8;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cart_conf_table td {
+    width: auto;
+    padding: 5px 5px;
+    border-right: 1px solid #DDDDDD;
+    background-color: #FFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cart_table td p {
+    margin: 0;
+}
+
+.cart_conf_table td img {
+    height: 60px;
+}
+
+.cart_conf_table tr:last-child td {
+    color: red;
+    font-weight: bold;
+}
+
+.purchase_edit_cancel {
+    text-align: center;
+}
+
+.purchase_edit_cancel input {
+    background-color: #777777;
+    cursor: pointer;
+    padding: 10px 40px;
+    margin: 10px auto 0 auto;
+    border: 0;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.purchase_edit_cancel input:hover {
+    opacity: 0.8;
+}
+
+.purchase_edit_btn {
+    margin: 0;
+    text-align: center;
+}
+
+.purchase_edit_btn a {
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 15px;
+    background-color: #777777;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/*-------------------------
+    商品購入完了画面
+-------------------------*/
+.purchase_done {
+    padding: 50px 0 70px;
+}
+
+.purchase_done_panel {
+    padding: 30px 40px;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.purchase_done_title {
+    background: #5e564f;
+    color: #fff;
+    font-size: 20px;
+    border-left: 8px solid #FF9966;
+    padding: 15px 20px 15px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.purchase_done_txt1 {
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.purchase_done_txt2 {
+    padding: 0 0 30px;
+}
+
+.purchase_done_btn {
+    display: inline-block;
+    padding: 10px 40px;
+    margin: 0 0 30px;
+    border-radius: 15px;
+    background-color: #ff6699;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.purchase_done_btn:hover {
+    opacity: 0.8;
+}
+
+.purchase_done_error {
+    font-size: 20px;
+    color: red;
+}
